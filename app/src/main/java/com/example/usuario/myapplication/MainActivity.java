@@ -1,31 +1,31 @@
 package com.example.usuario.myapplication;
 
+
+import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.view.View.OnClickListener;
-import android.support.v7.app.AppCompatActivity;
+
+public class MainActivity extends Activity {
+
+    Button siguiente;
+
+            protected void onCreate(Bundle savedInstanceState) {
+                super.onCreate(savedInstanceState);
+                setContentView(R.layout.activity_main);
 
 
-public class MainActivity extends AppCompatActivity {
+            siguiente = (Button)findViewById(R.id.button2);
+                siguiente.setOnClickListener(new View.OnClickListener() {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+                    @Override
+                    public void onClick(View v) {
+                Intent siguiente = new Intent(MainActivity.this , InfoActivity.class);
+                        startActivity(siguiente);
+                    }
+                });
 
-        Button btn = (Button) findViewById(R.id.button2);
-        btn.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                Intent siguiente = new Intent (MainActivity.this, InfoActivity.class);
-                startActivityForResult(siguiente, 0);
+        }
             }
 
-});
-    }
-
-
-            }
