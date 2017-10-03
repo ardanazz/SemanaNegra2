@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends Activity {
 
-    Button siguiente;
+    Button siguiente, next;
 
             protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
@@ -26,6 +26,18 @@ public class MainActivity extends Activity {
                     }
                 });
 
-        }
-            }
+                next = (Button)findViewById(R.id.button);
+                next.setOnClickListener(new View.OnClickListener() {
 
+                    @Override
+                    public void onClick(View v) {
+                        Intent siguiente = new Intent(MainActivity.this , Jugar.class);
+                        startActivity(siguiente);
+                    }
+                });
+        }
+
+
+
+
+            }
