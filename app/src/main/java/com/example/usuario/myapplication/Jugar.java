@@ -57,6 +57,7 @@ public class Jugar extends FragmentActivity implements OnMapReadyCallback {
             return;
         }
         mMap.setMyLocationEnabled(true);
+        
 
     }
 }
