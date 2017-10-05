@@ -9,6 +9,8 @@ import android.widget.Button;
 
 public class MainActivity extends Activity {
 
+
+
     Button siguiente, next;
 
             protected void onCreate(Bundle savedInstanceState) {
