@@ -1,56 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="#000000"
     android:orientation="vertical"
     android:weightSum="1"
     tools:context="com.example.usuario.myapplication.MainActivity">
 
 
-
-
- <ImageView
-     android:id="@+id/imageView"
-     android:layout_width="418dp"
-     android:layout_height="308dp"
-     android:adjustViewBounds="false"
-     android:background="@drawable/logo"
-     android:cropToPadding="false"
-     android:visibility="visible"
-     app:srcCompat="@drawable/logo"
-     tools:layout_editor_absoluteX="-6dp"
-     tools:layout_editor_absoluteY="90dp" />
-
-
-    <Button
-        android:id="@+id/buttonInvisible"
-        android:layout_width="181dp"
-        android:layout_height="129dp"
-        android:elevation="0dp"
-        android:text=""
-        android:visibility="invisible"
-        tools:layout_editor_absoluteX="198dp"
-        tools:layout_editor_absoluteY="37dp" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="183dp"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:elevation="0dp"
-        android:text="JUGAR"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="37dp" />
+        android:layout_marginBottom="163dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/logo"
+        android:cropToPadding="true"
+        android:scaleType="centerInside"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_optimizationLevel="all"
+        app:srcCompat="@drawable/logo"
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="181dp"
-        android:layout_height="50dp"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="169dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="60dp"
+        android:background="@color/colorPrimary"
         android:elevation="0dp"
         android:text="INFORMACIÓN"
-        tools:layout_editor_absoluteX="198dp"
-        tools:layout_editor_absoluteY="37dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1" />
 
-</TableLayout>
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="169dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="29dp"
+        android:background="@color/colorPrimary"
+        android:elevation="0dp"
+        android:text="JUGAR"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1" />
+
+</android.support.constraint.ConstraintLayout>
